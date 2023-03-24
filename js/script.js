@@ -29,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector(".nav");
   const logo = document.querySelector(".nav__logo");
   const header = document.querySelector(".header");
-  const html = document.documentElement;
+  const project_links = document.querySelectorAll(
+    ".nav__list__item__link--aboutproject"
+  );
+  // const html = document.documentElement;
 
   navBurger.addEventListener("click", function () {
     if (!this.classList.contains("open")) {
@@ -51,5 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("header-top");
       //   html.style.overflowY = "scroll";
     }
+  });
+
+  project_links.forEach((element) => {
+    element.addEventListener("click", function () {
+      navBurger.classList.remove("open");
+      navMenu.classList.remove("menu-open");
+      navSocialLang.classList.remove("menu-open");
+      navSocialLang.classList.remove("menu-open__social-lang");
+      logo.classList.remove("burger-logo");
+      nav.classList.remove("fixed-top");
+      header.classList.remove("header-top");
+    });
   });
 });
