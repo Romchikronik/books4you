@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const project_links = document.querySelectorAll(
     ".nav__list__item__link--aboutproject"
   );
-  // const html = document.documentElement;
+  const html = document.documentElement;
 
   navBurger.addEventListener("click", function () {
     if (!this.classList.contains("open")) {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       logo.classList.add("burger-logo");
       nav.classList.add("fixed-top");
       header.classList.add("header-top");
-      //   html.style.overflowY = "hidden";
+      html.style.overflowY = "hidden";
     } else {
       this.classList.remove("open");
       navMenu.classList.remove("menu-open");
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       logo.classList.remove("burger-logo");
       nav.classList.remove("fixed-top");
       header.classList.remove("header-top");
-      //   html.style.overflowY = "scroll";
+      html.style.overflowY = "scroll";
     }
   });
 
@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       logo.classList.remove("burger-logo");
       nav.classList.remove("fixed-top");
       header.classList.remove("header-top");
+      html.style.overflowY = "scroll";
     });
   });
 });
